@@ -1,0 +1,45 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "flowtype"
+  ],
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "mocha": true
+  },
+  "rules": {
+    "semi": "off",
+    "react/jsx-filename-extension": "off",
+    "symbol-description": "off",
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "flowtype/require-parameter-type": "warn",
+    "flowtype/require-return-type": [
+      "warn",
+      "always",
+      {
+        "annotateUndefined": "never"
+      }
+    ],
+    "flowtype/space-after-type-colon": [
+      "warn",
+      "always"
+    ],
+    "flowtype/space-before-type-colon": [
+      "warn",
+      "never"
+    ],
+    "flowtype/type-id-match": [
+      "warn",
+      "^([A-Z][a-z0-9]+)+Type$"
+    ]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}

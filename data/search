@@ -1,0 +1,52 @@
+[
+  {
+    "uuid": 1,
+    "user": {
+      "profile_image_url": "./data/icon.png"
+    },
+    "title": "title1",
+    "url": "",
+    "updated_at_in_words": "5分",
+    "stock_count": 99
+  },
+  {
+    "uuid": 2,
+    "user": {
+      "profile_image_url": "./data/icon.png"
+    },
+    "title": "title2",
+    "url": "",
+    "updated_at_in_words": "5分",
+    "stock_count": 99
+  },
+  {
+    "uuid": 3,
+    "user": {
+      "profile_image_url": "./data/icon.png"
+    },
+    "title": "title3",
+    "url": "",
+    "updated_at_in_words": "5分",
+    "stock_count": 99
+  },
+  {
+    "uuid": 4,
+    "user": {
+      "profile_image_url": "./data/icon.png"
+    },
+    "title": "title4",
+    "url": "",
+    "updated_at_in_words": "5分",
+    "stock_count": 99
+  },
+  {
+    "uuid": 5,
+    "user": {
+      "profile_image_url": "./data/icon.png"
+    },
+    "title": "title5",
+    "url": "",
+    "updated_at_in_words": "5分",
+    "stock_count": 99
+  }
+]
