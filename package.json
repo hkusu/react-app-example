@@ -35,6 +35,7 @@
     "eslint": "^3.6.0",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-flowtype": "^2.19.0",
+    "eslint-plugin-flowtype-errors": "^1.1.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.3.0",

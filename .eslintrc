@@ -1,7 +1,8 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "flowtype"
+    "flowtype",
+    "flowtype-errors"
   ],
   "extends": "airbnb",
   "env": {
@@ -35,7 +36,8 @@
     "flowtype/type-id-match": [
       "warn",
       "^([A-Z][a-z0-9]+)+Type$"
-    ]
+    ],
+    "flowtype-errors/show-errors": "error"
   },
   "settings": {
     "flowtype": {
