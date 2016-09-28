@@ -15,10 +15,10 @@ const configs = {
   development1: {
   },
   development2: {
-    QIITA_BASE_URL: `http://localhost:${location.port}/data`,
+    QIITA_BASE_URL: './dummydata',
   },
   spec: {
-    QIITA_BASE_URL: `http://localhost:${location.port}/data`,
+    QIITA_BASE_URL: './dummydata',
   },
 }
 

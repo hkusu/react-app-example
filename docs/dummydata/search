@@ -2,7 +2,7 @@
   {
     "uuid": 1,
     "user": {
-      "profile_image_url": "./../data/icon.png"
+      "profile_image_url": "./dummydata/icon.png"
     },
     "title": "title1",
     "url": "",
@@ -12,7 +12,7 @@
   {
     "uuid": 2,
     "user": {
-      "profile_image_url": "./../data/icon.png"
+      "profile_image_url": "./dummydata/icon.png"
     },
     "title": "title2",
     "url": "",
@@ -22,7 +22,7 @@
   {
     "uuid": 3,
     "user": {
-      "profile_image_url": "./../data/icon.png"
+      "profile_image_url": "./dummydata/icon.png"
     },
     "title": "title3",
     "url": "",
@@ -32,7 +32,7 @@
   {
     "uuid": 4,
     "user": {
-      "profile_image_url": "./../data/icon.png"
+      "profile_image_url": "./dummydata/icon.png"
     },
     "title": "title4",
     "url": "",
@@ -42,7 +42,7 @@
   {
     "uuid": 5,
     "user": {
-      "profile_image_url": "./../data/icon.png"
+      "profile_image_url": "./dummydata/icon.png"
     },
     "title": "title5",
     "url": "",
