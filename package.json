@@ -3,17 +3,17 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "watch:development1": "CONFIG=development1 watchify -d -v -t babelify ./src/app.js -o ./dist/build.js",
-    "watch:development2": "CONFIG=development2 watchify -d -v -t babelify ./src/app.js -o ./dist/build.js",
-    "watch:staging": "CONFIG=staging watchify -d -v -t babelify ./src/app.js -o ./dist/build.js",
-    "watch:production": "CONFIG=production watchify -d -v -t babelify ./src/app.js -o ./dist/build.js",
-    "serve": "browser-sync start --server --files ./dist/build.js",
+    "watch:development1": "CONFIG=development1 watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
+    "watch:development2": "CONFIG=development2 watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
+    "watch:staging": "CONFIG=staging watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
+    "watch:production": "CONFIG=production watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
+    "serve": "browser-sync start --server --startPath ./docs/  --files ./docs/build.js",
     "lint": "eslint ./src/* ./test/*; exit 0",
     "flow": "flow check --color always; exit 0",
     "test": "CONFIG=spec mocha -r babel-register -r jsdom-global/register -R spec -c ./test/**/*Spec.js; exit 0",
     "test:min": "CONFIG=spec mocha -r babel-register -r jsdom-global/register -R min -c ./test/**/*Spec.js; exit 0",
     "lint-flow-test": "npm-run-all lint flow test:min",
-    "build": "NODE_ENV=production CONFIG=production browserify -t babelify ./src/app.js | uglifyjs -mc -o ./dist/build.js"
+    "build": "NODE_ENV=production CONFIG=production browserify -t babelify ./src/app.js | uglifyjs -mc -o ./docs/build.js"
   },
   "license": "MIT",
   "devDependencies": {
