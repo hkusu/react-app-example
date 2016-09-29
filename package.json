@@ -1,7 +1,7 @@
 {
   "name": "react-app",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.0",
+  "description": "example of application using react",
   "scripts": {
     "watch:development1": "CONFIG=development1 watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
     "watch:development2": "CONFIG=development2 watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
@@ -15,7 +15,19 @@
     "lint-flow-test": "npm-run-all lint flow test:min",
     "build": "NODE_ENV=production CONFIG=production browserify -t babelify ./src/app.js | uglifyjs -mc -o ./docs/build.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkusu/react-app-example.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "hkusu",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hkusu/react-app-example/issues"
+  },
+  "homepage": "https://github.com/hkusu/react-app-example#readme",
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "babel-plugin-transform-class-properties": "^6.10.2",
