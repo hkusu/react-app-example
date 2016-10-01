@@ -7,7 +7,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import QiitaApp from './component/QiitaApp'
 import NotFound from './component/NotFound'
 
-const Index = (props: { children: React.Element<>[] }): React.Element<> => (
+const Index = (props: { children: any }): any => (
   <div>
     {props.children}
   </div>

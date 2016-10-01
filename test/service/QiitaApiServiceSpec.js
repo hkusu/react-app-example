@@ -21,9 +21,9 @@ describe('QiitaApiService', () => {
       qiitaApiServiceHttpGetStub.restore()
     })
 
-    it('be fulfilled', (done: *) => {
+    it('be fulfilled', (done: any) => {
       expect(qiitaApiService.search('abc', 99)).to.be.fulfilled
-        .then((result: *) => {
+        .then((result: any) => {
           expect(qiitaApiServiceHttpGetStub).to.have.been.calledWith(
             'search?q=abc&per_page=99'
           )

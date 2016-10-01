@@ -12,5 +12,5 @@ export type ItemType = {
 
 export type ConfigType = {
   QIITA_BASE_URL: string,
-  CONSOLE_LOG_ENABLE: bool,
+  CONSOLE_LOG_ENABLE: boolean,
 }

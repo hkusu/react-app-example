@@ -24,7 +24,7 @@ class QiitaApp extends Component {
   state: {
     items: ItemType[],
     searchCount: number,
-    loading: bool,
+    loading: boolean,
   } = {
     items: [],
     searchCount: 0,
@@ -37,7 +37,7 @@ class QiitaApp extends Component {
   }
 
   subscribe(subscribe: Function) {
-    subscribe(ActionKey.SHOW_LOADING, (loading: bool) => {
+    subscribe(ActionKey.SHOW_LOADING, (loading: boolean) => {
       this.setState(
         { loading }
       )
@@ -53,7 +53,7 @@ class QiitaApp extends Component {
     })
   }
 
-  render(): React.Element<> {
+  render(): any {
     const { items, searchCount, loading } = this.state
     const { defaultSearchWord, defaultItemDisplayNumber } = this.props
 

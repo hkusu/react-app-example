@@ -13,7 +13,7 @@ class NotFound extends Component {
     message: string,
   }
 
-  render(): React.Element<> {
+  render(): any {
     return (
       <div style={{ textAlign: 'center', margin: '20px' }}>
         <p style={{ opacity: 0.6 }}>

@@ -9,7 +9,7 @@ import Util from './../util/Util'
 @dispatcher
 class ItemSearch extends Component {
   state: {
-    searchable: bool,
+    searchable: boolean,
   } = {
     searchable: false,
   }
@@ -20,8 +20,8 @@ class ItemSearch extends Component {
     searchCount: number,
   }
 
-  searchWordRef: HTMLInputElement
-  itemDisplayNumberRef: HTMLInputElement
+  searchWordRef: any
+  itemDisplayNumberRef: any
 
   itemSearchAction = actions.itemSearchAction // have reference for test
 
@@ -33,7 +33,7 @@ class ItemSearch extends Component {
       .catch((error: Error) => { Util.log(error) })
   }
 
-  render(): React.Element<> {
+  render(): any {
     const { searchable } = this.state
     const { defaultSearchWord, defaultItemDisplayNumber } = this.props
 
@@ -51,7 +51,7 @@ class ItemSearch extends Component {
           placeholder="検索ワード"
           defaultValue={defaultSearchWord}
           autoFocus="true"
-          ref={(ref: HTMLInputElement) => { this.searchWordRef = ref }}
+          ref={(ref: any) => { this.searchWordRef = ref }}
           onChange={(e: Object) => {
             this.setState({ searchable: !!e.target.value.trim() })
           }}
@@ -66,7 +66,7 @@ class ItemSearch extends Component {
               Number(this.itemDisplayNumberRef.value))
           }}
           defaultValue={defaultItemDisplayNumber}
-          ref={(ref: HTMLInputElement) => { this.itemDisplayNumberRef = ref }}
+          ref={(ref: any) => { this.itemDisplayNumberRef = ref }}
         >
           <option value="5">5件</option>
           <option value="10">10件</option>
