@@ -9,9 +9,7 @@ import ItemList from './ItemList'
 import { ActionKey } from '../def/keys'
 import type { ItemType, ReactElementType } from '../def/types'
 
-@subscriber((self: QiitaApp, subscribe) => {
-  self.subscribe(subscribe)
-})
+@subscriber((self: QiitaApp, subscribe) => self.subscribe(subscribe))
 class QiitaApp extends Component {
   static defaultProps: {
     defaultSearchWord: string,

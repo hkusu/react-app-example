@@ -11,6 +11,6 @@ export function itemSearchAction(dispatch: Function,
   return Promise.resolve()
     .then(() => dispatch(ActionKey.SHOW_LOADING, true))
     .then(() => itemRepository.getItemByWord(searchWord, itemDisplayNumber))
-    .then(res => dispatch(ActionKey.REFRESH_ITEMS, res.data))
+    .then(aObject => dispatch(ActionKey.REFRESH_ITEMS, aObject.data))
     .then(() => dispatch(ActionKey.SHOW_LOADING, false))
 }
