@@ -5,20 +5,23 @@ const env = process.env.CONFIG
 const configs = {
   config: {
     QIITA_BASE_URL: 'https://qiita.com/api/v1',
-    CONSOLE_LOG_ENABLE: true,
-  },
-  production: {
     CONSOLE_LOG_ENABLE: false,
   },
-  staging: {
+  production: {
   },
-  development1: {
+  development: {
+    CONSOLE_LOG_ENABLE: true,
   },
-  development2: {
-    QIITA_BASE_URL: './dummydata',
+  local: {
+    CONSOLE_LOG_ENABLE: true,
+  },
+  localUseStub: {
+    QIITA_BASE_URL: './stub',
+    CONSOLE_LOG_ENABLE: true,
   },
   spec: {
-    QIITA_BASE_URL: './dummydata',
+    QIITA_BASE_URL: './stub',
+    CONSOLE_LOG_ENABLE: true,
   },
 }
 

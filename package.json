@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "description": "example of application using react",
   "scripts": {
-    "watch:development1": "CONFIG=development1 watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
-    "watch:development2": "CONFIG=development2 watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
-    "watch:staging": "CONFIG=staging watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
+    "watch:local": "CONFIG=local watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
+    "watch:local-use-stub": "CONFIG=localUseStub watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
+    "watch:development": "CONFIG=development watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
     "watch:production": "CONFIG=production watchify -d -v -t babelify ./src/app.js -o ./docs/build.js",
     "serve": "browser-sync start --server --startPath ./docs/  --files ./docs/build.js",
+    "watchlocal-serve": "npm-run-all --parallel watch:local serve",
     "lint": "eslint ./src/* ./test/*; exit 0",
     "flow": "flow check --color always; exit 0",
     "test": "CONFIG=spec mocha -r babel-register -r jsdom-global/register -R spec -c ./test/**/*Spec.js; exit 0",
     "test:min": "CONFIG=spec mocha -r babel-register -r jsdom-global/register -R min -c ./test/**/*Spec.js; exit 0",
-    "lint-flow-test": "npm-run-all lint flow test:min",
+    "lint-flow-testmin": "npm-run-all lint flow test:min",
     "build": "NODE_ENV=production CONFIG=production browserify -t babelify ./src/app.js | uglifyjs -mc -o ./docs/build.js"
   },
   "repository": {
