@@ -9,8 +9,8 @@ export function itemSearchAction(dispatch: Function,
   const itemRepository = appModule.provideItemRepository()
 
   return Promise.resolve()
-    .then(() => { dispatch(ActionKey.SHOW_LOADING, true) })
-    .then((): Promise<Object> => itemRepository.getItemByWord(searchWord, itemDisplayNumber))
-    .then((res: Object) => { dispatch(ActionKey.REFRESH_ITEMS, res.data) })
-    .then(() => { dispatch(ActionKey.SHOW_LOADING, false) })
+    .then(() => dispatch(ActionKey.SHOW_LOADING, true))
+    .then(() => itemRepository.getItemByWord(searchWord, itemDisplayNumber))
+    .then(aObject => dispatch(ActionKey.REFRESH_ITEMS, aObject.data))
+    .then(() => dispatch(ActionKey.SHOW_LOADING, false))
 }

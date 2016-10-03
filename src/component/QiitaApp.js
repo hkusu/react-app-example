@@ -7,11 +7,9 @@ import { subscriber } from 'react-dispatcher-decorator'
 import ItemSearch from './ItemSearch'
 import ItemList from './ItemList'
 import { ActionKey } from '../def/keys'
-import type { ItemType } from '../def/types'
+import type { ItemType, ReactElementType } from '../def/types'
 
-@subscriber((self: QiitaApp, subscribe: Function) => {
-  self.subscribe(subscribe)
-})
+@subscriber((self: QiitaApp, subscribe) => self.subscribe(subscribe))
 class QiitaApp extends Component {
   static defaultProps: {
     defaultSearchWord: string,
@@ -37,23 +35,23 @@ class QiitaApp extends Component {
   }
 
   subscribe(subscribe: Function) {
-    subscribe(ActionKey.SHOW_LOADING, (loading: boolean) => {
+    subscribe(ActionKey.SHOW_LOADING, (loading: boolean) =>
       this.setState(
         { loading }
       )
-    })
+    )
 
-    subscribe(ActionKey.REFRESH_ITEMS, (items: ItemType[]) => {
+    subscribe(ActionKey.REFRESH_ITEMS, (items: ItemType[]) =>
       this.setState(
         {
           items,
           searchCount: this.state.searchCount + 1,
         }
       )
-    })
+    )
   }
 
-  render(): any {
+  render(): ReactElementType {
     const { items, searchCount, loading } = this.state
     const { defaultSearchWord, defaultItemDisplayNumber } = this.props
 

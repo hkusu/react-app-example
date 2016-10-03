@@ -6,7 +6,7 @@ import type { ItemType } from '../def/types'
 const ItemList = (props: {
   items: ItemType[],
   loading: boolean,
-}): any => (
+}) => (
   <div>
     {
       props.loading ?
@@ -19,7 +19,7 @@ const ItemList = (props: {
     <table>
       <tbody>
         {
-          props.items.map((item: ItemType): any => (
+          props.items.map((item: ItemType) => (
             <Item
               key={item.uuid}
               userProfileImageUrl={item.user.profile_image_url}

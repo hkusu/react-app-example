@@ -1,6 +1,7 @@
 /* @flow */
 // noinspection JSUnresolvedVariable
 import React, { Component } from 'react'
+import type { ReactElementType } from '../def/types'
 
 class NotFound extends Component {
   static defaultProps: {
@@ -13,7 +14,7 @@ class NotFound extends Component {
     message: string,
   }
 
-  render(): any {
+  render(): ReactElementType {
     return (
       <div style={{ textAlign: 'center', margin: '20px' }}>
         <p style={{ opacity: 0.6 }}>

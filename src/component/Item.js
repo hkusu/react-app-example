@@ -7,7 +7,7 @@ const Item = (props: {
   title: string,
   updatedAdInWords: string,
   stockCount: number,
-}): any => (
+}) => (
   <tr>
     <td width="100">
       <img src={props.userProfileImageUrl} alt="アイコン" width="80" />

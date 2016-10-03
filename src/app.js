@@ -6,8 +6,9 @@ import { render } from 'react-dom'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import QiitaApp from './component/QiitaApp'
 import NotFound from './component/NotFound'
+import type { ReactElementType } from './def/types'
 
-const Index = (props: { children: any }): any => (
+const Index = (props: { children: ReactElementType }) => (
   <div>
     {props.children}
   </div>

@@ -71,7 +71,7 @@ class Immutable {
     if (!Util.isString(key) || !Util.isArray(arr) || !Util.isObject(obj)) {
       throw new TypeError(TYPE_ERROR_MESSAGE_DEFAULT)
     }
-    return arr.map((entry) => {
+    return arr.map(entry => {
       if (!Util.isNumber(entry[key]) && !Util.isString(entry[key])) {
         return entry
       }
@@ -92,7 +92,7 @@ class Immutable {
     if (!Util.isString(key) || !Util.isArray(arr) || !Util.isObject(obj)) {
       throw new TypeError(TYPE_ERROR_MESSAGE_DEFAULT)
     }
-    return arr.filter((entry) => {
+    return arr.filter(entry => {
       if (!Util.isNumber(entry[key]) && !Util.isString(entry[key])) {
         return true
       }
