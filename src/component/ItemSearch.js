@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import { dispatcher } from 'react-dispatcher-decorator'
 import * as actions from './../actions'
 import Util from './../util/Util'
+import type { ReactElementType } from '../def/types'
 
 @dispatcher
 class ItemSearch extends Component {
@@ -20,8 +21,8 @@ class ItemSearch extends Component {
     searchCount: number,
   }
 
-  searchWordRef: any
-  itemDisplayNumberRef: any
+  searchWordRef: Object
+  itemDisplayNumberRef: Object
 
   itemSearchAction = actions.itemSearchAction // have reference for test
 
@@ -30,16 +31,16 @@ class ItemSearch extends Component {
       return
     }
     this.itemSearchAction(this.context.dispatch, searchWord, itemDisplayNumber)
-      .catch((error: Error) => { Util.log(error) })
+      .catch(error => Util.log(error))
   }
 
-  render(): any {
+  render(): ReactElementType {
     const { searchable } = this.state
     const { defaultSearchWord, defaultItemDisplayNumber } = this.props
 
     return (
       <form
-        onSubmit={(e: Event) => {
+        onSubmit={e => {
           e.preventDefault()
           this.handleSearch(
             this.searchWordRef.value.trim(),
@@ -51,22 +52,22 @@ class ItemSearch extends Component {
           placeholder="検索ワード"
           defaultValue={defaultSearchWord}
           autoFocus="true"
-          ref={(ref: any) => { this.searchWordRef = ref }}
-          onChange={(e: Object) => {
+          ref={ref => { this.searchWordRef = ref }}
+          onChange={e =>
             this.setState({ searchable: !!e.target.value.trim() })
-          }}
+          }
         />
         &nbsp;
         <input type="submit" value="検索" disabled={!searchable} />
         &nbsp;&nbsp;
         <select
-          onChange={() => {
+          onChange={() =>
             this.handleSearch(
               this.searchWordRef.value.trim(),
               Number(this.itemDisplayNumberRef.value))
-          }}
+          }
           defaultValue={defaultItemDisplayNumber}
-          ref={(ref: any) => { this.itemDisplayNumberRef = ref }}
+          ref={ref => { this.itemDisplayNumberRef = ref }}
         >
           <option value="5">5件</option>
           <option value="10">10件</option>

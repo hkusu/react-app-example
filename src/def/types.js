@@ -14,3 +14,5 @@ export type ConfigType = {
   QIITA_BASE_URL: string,
   CONSOLE_LOG_ENABLE: boolean,
 }
+
+export type ReactElementType = React$Element<>

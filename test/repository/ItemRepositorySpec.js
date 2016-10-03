@@ -24,9 +24,9 @@ describe('ItemRepository', () => {
       qiitaApiServiceSearchStub.restore()
     })
 
-    it('be fulfilled', (done: any) => {
+    it('be fulfilled', done => {
       expect(itemRepository.getItemByWord('abc', 99)).to.be.fulfilled
-        .then((result: any) => {
+        .then(result => {
           expect(qiitaApiServiceSearchStub).to.have.been.calledWith(
             'abc',
             99

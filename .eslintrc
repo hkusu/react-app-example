@@ -4,7 +4,10 @@
     "flowtype",
     "flowtype-errors"
   ],
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
   "env": {
     "browser": true,
     "mocha": true
@@ -13,28 +16,22 @@
     "semi": "off",
     "react/jsx-filename-extension": "off",
     "symbol-description": "off",
-    "arrow-parens": [
+    "arrow-parens": "off",
+    "flowtype/require-parameter-type": [
       "error",
-      "always"
-    ],
-    "flowtype/require-parameter-type": "warn",
-    "flowtype/require-return-type": [
-      "warn",
-      "always",
       {
-        "annotateUndefined": "never"
+        "excludeArrowFunctions": true
       }
     ],
-    "flowtype/space-after-type-colon": [
-      "warn",
-      "always"
-    ],
-    "flowtype/space-before-type-colon": [
-      "warn",
-      "never"
+    "flowtype/require-return-type": [
+      "error",
+      "always",
+      {
+        "excludeArrowFunctions": true
+      }
     ],
     "flowtype/type-id-match": [
-      "warn",
+      "error",
       "^([A-Z][a-z0-9]+)+Type$"
     ],
     "flowtype-errors/show-errors": "error"
