@@ -36,7 +36,7 @@ class ItemSearch extends Component {
 
   render(): ReactElementType {
     const { searchable } = this.state
-    const { defaultSearchWord, defaultItemDisplayNumber } = this.props
+    const { defaultSearchWord, defaultItemDisplayNumber, searchCount } = this.props
 
     return (
       <form
@@ -77,7 +77,7 @@ class ItemSearch extends Component {
         </select>
         &nbsp;&nbsp;
         <font size="1">
-          {this.props.searchCount} 回 検索しました
+          {searchCount} 回 検索しました
         </font>
       </form>
     )
