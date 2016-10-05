@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 // noinspection JSUnresolvedVariable
 import { dispatcher } from 'react-dispatcher-decorator'
 import * as itemActions from '../action/itemActions'
-import Util from './../util/Util'
+import Util from '../utility/Util'
 import type { ReactElementType } from '../definition/types'
 
 @dispatcher

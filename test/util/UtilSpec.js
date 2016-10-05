@@ -1,7 +1,7 @@
 /* eslint no-unused-expressions: "off" */
 /* eslint no-new: "off" */
 import { expect } from './../tools'
-import Util from './../../src/util/Util'
+import Util from '../../src/utility/Util'
 
 describe('Util', () => {
   it('throw Error if to create an instance', () => {

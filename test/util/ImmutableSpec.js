@@ -1,6 +1,6 @@
 /* eslint no-new: "off" */
 import { expect } from './../tools'
-import Immutable from './../../src/util/Immutable'
+import Immutable from '../../src/utility/Immutable'
 
 describe('Immutable', () => {
   it('throw Error if to create an instance', () => {
