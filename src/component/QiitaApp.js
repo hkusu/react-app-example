@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import { subscriber } from 'react-dispatcher-decorator'
 import ItemSearch from './ItemSearch'
 import ItemList from './ItemList'
-import { ActionKey } from '../def/keys'
+import { ItemAction } from '../action/itemActions'
 import type { ItemType, ReactElementType } from '../def/types'
 
 @subscriber((self: QiitaApp, subscribe) => self.subscribe(subscribe))
@@ -35,13 +35,13 @@ class QiitaApp extends Component {
   }
 
   subscribe(subscribe: Function) {
-    subscribe(ActionKey.SHOW_LOADING, (loading: boolean) =>
+    subscribe(ItemAction.SHOW_LOADING, (loading: boolean) =>
       this.setState(
         { loading }
       )
     )
 
-    subscribe(ActionKey.REFRESH_ITEMS, (items: ItemType[]) =>
+    subscribe(ItemAction.REFRESH_ITEMS, (items: ItemType[]) =>
       this.setState(
         {
           items,
