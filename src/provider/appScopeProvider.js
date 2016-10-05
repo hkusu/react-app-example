@@ -1,8 +1,8 @@
 /* @flow */
-import ItemRepository from './repository/ItemRepository'
-import QiitaApiService from './service/QiitaApiService'
+import ItemRepository from '../repository/ItemRepository'
+import QiitaApiService from '../service/QiitaApiService'
 
-class AppModule {
+class AppScopeProvider {
   /** @private */
   qiitaApiService: QiitaApiService
   /** @private */
@@ -22,4 +22,4 @@ class AppModule {
   }
 }
 
-export default new AppModule()
+export default new AppScopeProvider()

@@ -1,12 +1,12 @@
 /* @flow */
 /* eslint import/prefer-default-export: "off" */
-import { ActionKey } from './def/keys'
-import appModule from './appModule'
+import { ActionKey } from '../def/keys'
+import appScopeProvider from '../provider/appScopeProvider'
 
 export function itemSearchAction(dispatch: Function,
                            searchWord: string,
                            itemDisplayNumber: number): Promise<> {
-  const itemRepository = appModule.provideItemRepository()
+  const itemRepository = appScopeProvider.provideItemRepository()
 
   return Promise.resolve()
     .then(() => dispatch(ActionKey.SHOW_LOADING, true))

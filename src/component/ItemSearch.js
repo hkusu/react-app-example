@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 // noinspection JSUnresolvedVariable
 import { dispatcher } from 'react-dispatcher-decorator'
-import * as actions from './../actions'
+import * as itemActions from '../action/itemActions'
 import Util from './../util/Util'
 import type { ReactElementType } from '../def/types'
 
@@ -24,7 +24,7 @@ class ItemSearch extends Component {
   searchWordRef: Object
   itemDisplayNumberRef: Object
 
-  itemSearchAction = actions.itemSearchAction // have reference for test
+  itemSearchAction = itemActions.itemSearchAction // have reference for test
 
   handleSearch(searchWord: string, itemDisplayNumber: number) {
     if (!this.state.searchable || !searchWord) {
