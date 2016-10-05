@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 import Item from './Item'
-import type { ItemType } from '../def/types'
+import type { ItemType } from '../definition/types'
 
 const ItemList = (props: {
   items: ItemType[],

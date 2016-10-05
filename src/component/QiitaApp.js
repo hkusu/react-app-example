@@ -7,7 +7,7 @@ import { subscriber } from 'react-dispatcher-decorator'
 import ItemSearch from './ItemSearch'
 import ItemList from './ItemList'
 import { ItemAction } from '../action/itemActions'
-import type { ItemType, ReactElementType } from '../def/types'
+import type { ItemType, ReactElementType } from '../definition/types'
 
 @subscriber((self: QiitaApp, subscribe) => self.subscribe(subscribe))
 class QiitaApp extends Component {

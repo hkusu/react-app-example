@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import { dispatcher } from 'react-dispatcher-decorator'
 import * as itemActions from '../action/itemActions'
 import Util from './../util/Util'
-import type { ReactElementType } from '../def/types'
+import type { ReactElementType } from '../definition/types'
 
 @dispatcher
 class ItemSearch extends Component {

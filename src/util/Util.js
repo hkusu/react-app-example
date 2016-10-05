@@ -1,5 +1,5 @@
 /* eslint no-console: "off" */
-import config from '../def/config'
+import config from '../definition/config'
 
 class Util {
   /**

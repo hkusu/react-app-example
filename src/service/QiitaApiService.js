@@ -1,7 +1,7 @@
 /* @flow */
 /* eslint class-methods-use-this: "off" */
 import axios from 'axios'
-import config from '../def/config'
+import config from '../definition/config'
 
 class QiitaApiService {
   search(searchWord: string, perPage: number = 10): Promise<Object> {

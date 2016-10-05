@@ -1,7 +1,7 @@
 /* @flow */
 // noinspection JSUnresolvedVariable
 import React, { Component } from 'react'
-import type { ReactElementType } from '../def/types'
+import type { ReactElementType } from '../definition/types'
 
 class NotFound extends Component {
   static defaultProps: {
