@@ -9,10 +9,12 @@ class AppScopeProvider {
   /** @private */
   itemRepository: ItemRepository
 
+  /** @private */
   createQiitaApiService(): QiitaApiService {
     return new QiitaApiService()
   }
 
+  /** @private */
   createItemRepository(): ItemRepository {
     return new ItemRepository(this.provideQiitaApiService())
   }
