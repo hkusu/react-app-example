@@ -15,6 +15,7 @@
   "rules": {
     "semi": "off",
     "react/jsx-filename-extension": "off",
+    "react/prefer-stateless-function": "off",
     "symbol-description": "off",
     "arrow-parens": "off",
     "flowtype/require-parameter-type": [
