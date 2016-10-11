@@ -1,4 +1,5 @@
 /* @flow */
+/* eslint class-methods-use-this: "off" */
 import ItemRepository from '../repository/ItemRepository'
 import QiitaApiService from '../service/QiitaApiService'
 
@@ -8,16 +9,25 @@ class AppScopeProvider {
   /** @private */
   itemRepository: ItemRepository
 
-  constructor() {
-    this.qiitaApiService = new QiitaApiService()
-    this.itemRepository = new ItemRepository(this.qiitaApiService)
+  createQiitaApiService(): QiitaApiService {
+    return new QiitaApiService()
+  }
+
+  createItemRepository(): ItemRepository {
+    return new ItemRepository(this.provideQiitaApiService())
   }
 
   provideQiitaApiService(): QiitaApiService {
+    if (!this.qiitaApiService) {
+      return this.createQiitaApiService()
+    }
     return this.qiitaApiService
   }
 
   provideItemRepository(): ItemRepository {
+    if (!this.itemRepository) {
+      return this.createItemRepository()
+    }
     return this.itemRepository
   }
 }
