@@ -65,7 +65,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "axios": "^0.14.0",
+    "axios": "0.15.0",
     "react": "^15.3.2",
     "react-dispatcher-decorator": "^0.1.5",
     "react-dom": "^15.3.2",
